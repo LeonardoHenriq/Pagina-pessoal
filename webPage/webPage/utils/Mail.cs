@@ -17,14 +17,14 @@ namespace webPage.utils
             try
             {
                 MailMessage mail = new MailMessage();
-                mail.To.Add("leonardourbano244@gmail.com");
-                mail.From = new MailAddress("leonardourbano244@gmail.com");
+                mail.To.Add("meuemail@mail.com");
+                mail.From = new MailAddress("meuemail@mail.com");
                 mail.Subject = "[Página Pessoal] Leonardo Urbano";
                 mail.Body = $" <h1>[Página Pessoal Leonardo Urbano]</h1> <br> <br><br> <h3>{nome} entrou em contato. <br>Com a seguinte Mensagem: {msg} <br> Retorne um email para {email}</h3>";
                 mail.IsBodyHtml = true;
                 var client = new SmtpClient("smtp.mailtrap.io", 587)
                 {
-                    Credentials = new NetworkCredential("b9931e3b34ef4d", "be49957802f19e"),
+                    Credentials = new NetworkCredential("123", "123"),
                     EnableSsl = true
                 };
                 client.Send(mail);
